@@ -7,12 +7,9 @@
 
 
 import pandas as pd
-import numpy as np
-import cv2
 import random
 import time
 
-# from sklearn.cross_validation import train_test_split
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
@@ -73,8 +70,6 @@ if __name__ == '__main__':
     # 选取 2/3 数据作为训练集， 1/3 数据作为测试集
     train_features, test_features, train_labels, test_labels = train_test_split(
         imgs, labels, test_size=0.33, random_state=23323)
-    # print train_features.shape
-    # print train_features.shape
 
     time_2 = time.time()
     print 'read data cost ', time_2 - time_1, ' second', '\n'
