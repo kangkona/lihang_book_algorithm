@@ -12,14 +12,15 @@ import cv2
 import random
 import time
 
-from sklearn.cross_validation import train_test_split
+# from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 
 class Perceptron(object):
 
     def __init__(self):
-        self.learning_step = 0.00001
+        self.learning_step = 0.001
         self.max_iteration = 5000
 
     def predict_(self, x):
